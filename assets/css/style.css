@@ -1,0 +1,93 @@
+:root {
+  --font-primary: "Inter";
+  --font-secondary: "Plus Jakarta Sans";
+
+  --color-purple: #7e74f1;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+#hero {
+  margin-top: 25px;
+}
+
+#hero-text {
+  width: 100%;
+}
+
+.above-title {
+  font-family: var(--font-primary);
+  font-weight: initial;
+  font-size: 12px;
+}
+
+hr {
+  width: 2%;
+  margin-right: 5px;
+}
+
+h3 {
+  font-family: var(--font-secondary);
+}
+
+#hero-text h3 {
+  font-weight: bold;
+  font-size: 44px;
+}
+
+#hero-text h3 b {
+  color: var(--color-purple);
+}
+
+a.social-icon {
+  color: var(--color-primary);
+}
+
+a.social-icon:hover {
+  color: var(--color-purple);
+  cursor: pointer;
+}
+
+#hero h3 span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+#hero h3 p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+
+#services {
+  margin-top: 50px;
+}
+
+@media (min-width: 992px) {
+  #hero {
+    margin-top: 100px;
+  }
+
+  #services {
+    margin-top: 100px;
+  }
+}
