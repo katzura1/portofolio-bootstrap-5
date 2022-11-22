@@ -38,4 +38,25 @@ function erase() {
 
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
     if(textArray.length) setTimeout(type, newTextDelay + 150);
+    var glide = new Glide('.glide', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 3,
+        breakpoints: {
+            800: {
+                perView: 1
+            }
+        },
+        autoplay : 2000,
+    });
+    glide.mount();
+
+    const btn_prev = document.getElementsByClassName('btn-prev')[0];
+    btn_prev.addEventListener('click', () => {
+        glide.go('<')
+    });
+    const btn_next = document.getElementsByClassName('btn-next')[0];
+    btn_next.addEventListener('click', () => {
+        glide.go('>')
+    });
 });

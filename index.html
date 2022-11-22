@@ -19,17 +19,25 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Inter|Plus Jakarta Sans"
     />
+    <!-- Splide -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@glidejs/glide@3.6.0/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@glidejs/glide@3.6.0/dist/css/glide.theme.min.css"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Portofolio</title>
   </head>
   <body>
-    <div class="container">
-      <!-- Navbar -->
-      <nav
-        id="navbar"
-        class="navbar navbar-expand-lg navbar-light mt-lg-4 mt-sm-2 mt-2"
-      >
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg navbar-light sticky-top p-4 rounded-corner"
+    >
+      <div class="container">
         <a class="navbar-brand" href="#">
           <img
             src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
@@ -57,15 +65,19 @@
               <a
                 class="nav-link active text-end text-lg-start"
                 aria-current="page"
-                href="#"
+                href="#services"
                 >Services</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-end text-lg-start" href="#">Portfolios</a>
+              <a class="nav-link text-end text-lg-start" href="#career"
+                >Portfolios</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-end text-lg-start" href="#">Experience</a>
+              <a class="nav-link text-end text-lg-start" href="#education"
+                >Experience</a
+              >
             </li>
           </ul>
           <div class="d-flex flex-row-reverse flex-lg-row">
@@ -78,55 +90,414 @@
             </button>
           </div>
         </div>
-      </nav>
-      <!-- Hero -->
-      <div id="hero" class="row">
-        <div class="col-md-6 d-block d-md-flex align-items-center">
-          <div id="hero-text">
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Hero -->
+    <div id="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-block d-md-flex align-items-center">
+            <div id="hero-text">
+              <div class="d-flex">
+                <hr class="mt-2" />
+                <p class="ml-2 above-title">MY NAME IS JOHN DOE, AND I AM</p>
+              </div>
+              <h3 class="d-block w-100">
+                <span class="typed-text"></span
+                ><span class="cursor">&nbsp;</span>
+              </h3>
+              <p class="mt-4 fs-7 text-start">
+                Creative front-end developer with more than +5 years of
+                experience in enterprise companies and startups. Proficient in
+                JavaScript, Angular, and React. Passionate about UI/UX
+              </p>
+              <div class="d-flex flex-row gap-3 mt-4">
+                <a class="social-icon" href="#">
+                  <i class="fa-solid fa-brands fa-instagram fa-xl"></i>
+                </a>
+                <a class="social-icon" href="#">
+                  <i class="fa-solid fa-brands fa-github fa-xl"></i>
+                </a>
+                <a class="social-icon" href="#">
+                  <i class="fa-solid fa-brands fa-twitter fa-xl"></i>
+                </a>
+                <a class="social-icon" href="#">
+                  <i class="fa-solid fa-brands fa-linkedin fa-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center p-5">
+            <img
+              src="assets/image/hero-image.png"
+              alt="Hero Iamge"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="services">
+      <div class="container py-5">
+        <div
+          class="d-flex flex-column flex-lg-row align-items-lg-center align-items-end"
+        >
+          <div class="d-flex flex-column me-auto">
             <div class="d-flex">
               <hr class="mt-2" />
-              <p class="ml-2 above-title">MY NAME IS JOHN DOE, AND I AM</p>
+              <p class="mr-2 above-title">MY WORKS</p>
             </div>
-            <h3 class="d-block w-100">
-              <span class="typed-text"></span><span class="cursor">&nbsp;</span>
-            </h3>
-            <p class="mt-4 fs-7 text-start">
-              Creative front-end developer with more than +5 years of experience
-              in enterprise companies and startups. Proficient in JavaScript,
-              Angular, and React. Passionate about UI/UX
-            </p>
-            <div class="d-flex flex-row gap-3 mt-4">
-              <a class="social-icon" href="#">
-                <i class="fa-solid fa-brands fa-instagram fa-xl"></i>
-              </a>
-              <a class="social-icon" href="#">
-                <i class="fa-solid fa-brands fa-github fa-xl"></i>
-              </a>
-              <a class="social-icon" href="#">
-                <i class="fa-solid fa-brands fa-twitter fa-xl"></i>
-              </a>
-              <a class="social-icon" href="#">
-                <i class="fa-solid fa-brands fa-linkedin fa-xl"></i>
-              </a>
+            <h3>Featured Portfolios</h3>
+          </div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination gap-2">
+              <li class="page-item">
+                <button
+                  class="page-link rounded-pill btn-prev"
+                  href="#"
+                  aria-label="Previous"
+                >
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+              </li>
+              <li class="page-item">
+                <button
+                  class="page-link rounded-pill btn-next"
+                  href="#"
+                  aria-label="Next"
+                >
+                  <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="glide mt-5">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="card">
+                  <img
+                    src="assets/image/3d-people_prev_ui.png"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h3>Agency Website</h3>
+                    <div class="d-flex gap-2 mt-4">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Wordpress
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        <i class="fa fa-link"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="card">
+                  <img
+                    src="assets/image/hero-image.png"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h3>Dashboard Management Website</h3>
+                    <div class="d-flex gap-2 mt-4">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        PHP
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        <i class="fa fa-link"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="card">
+                  <img
+                    src="assets/image/hero-image.png"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h3>Agency Website</h3>
+                    <div class="d-flex gap-2 mt-4">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Wordpress
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        <i class="fa fa-link"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="career">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-lg-row align-items-lg-top align-item-start justify-content-start"
+        >
+          <div class="w-100 w-lg-25 d-flex flex-column">
+            <div class="d-flex">
+              <hr class="mt-2" />
+              <p class="mr-2 above-title">CAREER PATH</p>
+            </div>
+            <h3>Work Experiences</h3>
+            <div
+              class="nav flex-column nav-pills gap-3 mt-5"
+              id="v-pills-tab"
+              role="tablist"
+              aria-orientation="vertical"
+            >
+              <button
+                class="nav-link d-flex justify-content-between align-items-center active"
+                id="v-pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-home"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true"
+              >
+                Apple
+                <i class="fa fa-angle-right"></i>
+              </button>
+              <button
+                class="nav-link d-flex justify-content-between align-items-center"
+                id="v-pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-profile"
+                aria-selected="false"
+              >
+                Google
+                <i class="fa fa-angle-right"></i>
+              </button>
+              <button
+                class="nav-link d-flex justify-content-between align-items-center"
+                id="v-pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-profile"
+                aria-selected="false"
+              >
+                Facebook
+                <i class="fa fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            id="v-pills-tabContent"
+            class="tab-content w-100 w-lg-75 ms-0 ms-lg-5 me-auto p-3"
+          >
+            <div
+              class="career-pane tab-pane fade show active"
+              id="v-pills-home"
+              role="tabpanel"
+              aria-labelledby="v-pills-home-tab"
+              tabindex="0"
+            >
+              <h4>Front-end Developer Apple .Inc</h4>
+              <p>California, United States</p>
+              <p><b>Nov 2020 - Present · Full-time</b></p>
+              <div class="d-flex gap-3">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Wordpress
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Wordpress
+                </button>
+              </div>
+              <ul class="career-description mt-4">
+                <li>
+                  <i class="fa fa-check"></i>
+                  Improving overall website performance for mobile users.
+                </li>
+                <li>
+                  <i class="fa fa-check"></i>
+                  Collaborate with back-end developers and web designers to
+                  improve usability
+                </li>
+                <li>
+                  <i class="fa fa-check"></i>
+                  Add voice search feature for mobile app.
+                </li>
+                <li>
+                  <i class="fa fa-check"></i>
+                  Developing an admin panel to manage contents, users, products
+                  and ...
+                </li>
+              </ul>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-profile"
+              role="tabpanel"
+              aria-labelledby="v-pills-profile-tab"
+              tabindex="0"
+            >
+              ...
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-disabled"
+              role="tabpanel"
+              aria-labelledby="v-pills-disabled-tab"
+              tabindex="0"
+            >
+              ...
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-messages"
+              role="tabpanel"
+              aria-labelledby="v-pills-messages-tab"
+              tabindex="0"
+            >
+              ...
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-settings"
+              role="tabpanel"
+              aria-labelledby="v-pills-settings-tab"
+              tabindex="0"
+            >
+              ...
             </div>
           </div>
         </div>
-        <div class="col-md-6 d-flex align-items-center p-5">
-          <img
-            src="assets/image/hero-image.png"
-            alt="Hero Iamge"
-            class="img-fluid"
-          />
+      </div>
+    </div>
+
+    <div id="education">
+      <div class="container py-5">
+        <div
+          class="d-flex flex-column flex-lg-row align-items-lg-top align-item-start justify-content-start"
+        >
+          <div class="w-100 w-lg-25 d-flex flex-column">
+            <div class="d-flex">
+              <hr class="mt-2" />
+              <p class="mr-2 above-title">LEARNING PATH</p>
+            </div>
+            <h3>Education & Skills</h3>
+            <div class="wrapper mt-1">
+              <ul class="sessions">
+                <li>
+                  <div class="university">Kingston university</div>
+                  <p>Master's degree - Software Engineering</p>
+                  <p><b>2019 - 2021</b></p>
+                </li>
+                <li>
+                  <div class="university">Westminster School</div>
+                  <p>Diploma's degree - Mathematics</p>
+                  <p><b>2013 - 2015</b></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-100 w-lg-75 ms-0 ms-lg-5 me-auto p-3">
+            <p class="summary">
+              For 5+ years, I have been continuously learning in the field of
+              front-end and experimenting with new technologies and frameworks,
+              and here you can see a summary of my skills.
+            </p>
+            <h4>Front-end</h4>
+            <div class="d-flex gap-3 my-4">
+              <button type="button" class="btn btn-sm btn-outline-secondary">
+                Wordpress
+              </button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">
+                Wordpress</button
+              ><button type="button" class="btn btn-sm btn-outline-secondary">
+                Wordpress
+              </button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">
+                Wordpress</button
+              ><button type="button" class="btn btn-sm btn-outline-secondary">
+                Wordpress
+              </button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">
+                Wordpress
+              </button>
+            </div>
+            <h4>Back-end</h4>
+            <div class="d-flex gap-3 my-4">
+              <button type="button" class="btn btn-sm btn-outline-secondary">
+                Wordpress
+              </button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">
+                Wordpress</button
+              ><button type="button" class="btn btn-sm btn-outline-secondary">
+                Wordpress
+              </button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">
+                Wordpress</button
+              ><button type="button" class="btn btn-sm btn-outline-secondary">
+                Wordpress
+              </button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">
+                Wordpress
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div id="services" class="p-5">
-        <div class="d-flex flex-row justify-content-center">
-          <hr class="mt-2" />
-          <p class="mr-2 above-title">SERVICES</p>
-          <hr class="mt-2" />
+    <div id="footer" class="p-5">
+      <div
+        class="d-flex flex-column gap-3 justify-content-center align-items-center"
+      >
+        <div class="d-flex flex-row gap-3">
+          <a class="social-icon" href="#">
+            <i class="fa-solid fa-brands fa-instagram fa-xl"></i>
+          </a>
+          <a class="social-icon" href="#">
+            <i class="fa-solid fa-brands fa-github fa-xl"></i>
+          </a>
+          <a class="social-icon" href="#">
+            <i class="fa-solid fa-brands fa-twitter fa-xl"></i>
+          </a>
+          <a class="social-icon" href="#">
+            <i class="fa-solid fa-brands fa-linkedin fa-xl"></i>
+          </a>
         </div>
-        <h3 class="text-center">Specialized in</h3>
+        <p>© 2022 - Katzura</p>
       </div>
     </div>
 
@@ -138,6 +509,8 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://unpkg.com/@glidejs/glide@3.6.0/dist/glide.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--

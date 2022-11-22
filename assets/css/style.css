@@ -3,10 +3,21 @@
   --font-secondary: "Plus Jakarta Sans";
 
   --color-purple: #7e74f1;
+  --color-purple-light: #eae6fe;
+  --color-white: #ffffff;
+  --color-gray: #fbfbfb;
+  --color-black: #232e35;
+  --color-gray-dark: #f1f1f1;
 }
 
 body {
   font-family: var(--font-primary);
+  background-color: var(--color-gray);
+  color: var(--color-black);
+}
+
+#navbar {
+  background-color: var(--color-white);
 }
 
 #hero {
@@ -21,6 +32,7 @@ body {
   font-family: var(--font-primary);
   font-weight: initial;
   font-size: 12px;
+  letter-spacing: 3.5px;
 }
 
 hr {
@@ -31,6 +43,8 @@ hr {
 
 h3 {
   font-family: var(--font-secondary);
+  font-weight: bold;
+  font-size: 36px;
 }
 
 #hero-text h3 {
@@ -81,14 +95,179 @@ a.social-icon:hover {
 
 #services {
   margin-top: 50px;
+  background-color: white;
+}
+
+#career {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.card h3 {
+  font-family: var(--font-secondary);
+  font-weight: initial;
+  font-size: 1rem;
+}
+
+img.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  filter: opacity(40%);
+}
+
+img.card-img-top:hover {
+  filter: opacity(100%);
+}
+
+button.page-link {
+  background-color: var(--color-purple-light);
+}
+
+button.nav-link {
+  background-color: transparent !important;
+  color: var(--color-black) !important;
+  text-align: center !important;
+}
+
+button.nav-link.active {
+  background-color: var(--color-white) !important;
+  color: var(--color-purple) !important;
+}
+
+#v-pills-tabContent {
+  margin-top: 10px;
+}
+
+div.career-pane > h3 {
+  font-family: var(--font-secondary);
+  font-weight: initial;
+}
+
+ul.career-description {
+  list-style: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#education {
+  background-color: white;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+#education ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+#education .wrapper {
+  padding: 2rem;
+}
+
+#education li {
+  padding-bottom: 1.5rem;
+  border-left: 1px solid var(--color-gray-dark);
+  position: relative;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+#education li:last-child {
+  border: 0px;
+  padding-bottom: 0;
+}
+
+#education li:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: var(--color-gray-dark);
+  border: 1px solid var(--color-gray-dark);
+  /* box-shadow: 3px 3px 0px var(--color-gray-dark); */
+  /* box-shadow: 3px 3px 0px var(--color-gray-dark); */
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  top: 0px;
 }
 
 @media (min-width: 992px) {
   #hero {
+    margin-top: 50px;
+  }
+
+  #career {
     margin-top: 100px;
   }
 
-  #services {
-    margin-top: 100px;
+  #v-pills-tabContent {
+    margin-top: 0;
+  }
+
+  button.nav-link {
+    text-align: left;
+    padding: 20px 35px;
+  }
+}
+
+/* BREAKPOINTS */
+
+/* SM breakpoint */
+@media (min-width: 576px) {
+  /* CUSTOM WIDTHS */
+  .w-sm-10 {
+    width: 10% !important;
+  }
+  .w-sm-15 {
+    width: 15% !important;
+  }
+  .w-sm-20 {
+    width: 20% !important;
+  }
+  .w-sm-25 {
+    width: 25% !important;
+  }
+  .w-sm-75 {
+    width: 75% !important;
+  }
+}
+
+/* MD breakpoint*/
+@media (min-width: 768px) {
+  /* CUSTOM WIDTHS */
+  .w-md-10 {
+    width: 10% !important;
+  }
+  .w-md-15 {
+    width: 15% !important;
+  }
+  .w-md-20 {
+    width: 20% !important;
+  }
+  .w-md-25 {
+    width: 25% !important;
+  }
+  .w-md-75 {
+    width: 75% !important;
+  }
+}
+
+/* LG breakpoint */
+@media (min-width: 992px) {
+  /* CUSTOM WIDTHS */
+  .w-lg-10 {
+    width: 10% !important;
+  }
+  .w-lg-15 {
+    width: 15% !important;
+  }
+  .w-lg-20 {
+    width: 20% !important;
+  }
+  .w-lg-25 {
+    width: 25% !important;
+  }
+  .w-lg-75 {
+    width: 75% !important;
   }
 }
