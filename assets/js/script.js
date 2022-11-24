@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
                 perView: 1
             }
         },
-        autoplay : 2000,
     });
     glide.mount();
 
